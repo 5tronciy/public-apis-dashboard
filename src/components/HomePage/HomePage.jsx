@@ -196,28 +196,28 @@ function HomePage() {
           </div>
         </div>
         <div className={styles.menuBar}>
-          <a href>
+          <a href=".">
             <div className={styles.menuItem}>customers</div>
           </a>
-          <a href>
+          <a href=".">
             <div className={styles.menuItem}>destination</div>
           </a>
-          <a href>
+          <a href=".">
             <div className={styles.menuItem}>carriers</div>
           </a>
-          <a href>
+          <a href=".">
             <div className={styles.menuItem}>routes</div>
           </a>
-          <a href>
+          <a href=".">
             <div className={styles.menuItem}>phone numbers</div>
           </a>
-          <a href>
+          <a href=".">
             <div className={styles.menuItem}>companies</div>
           </a>
-          <a href>
+          <a href=".">
             <div className={styles.menuItem}>users</div>
           </a>
-          <a href>
+          <a href=".">
             <div className={styles.menuItem}>products</div>
           </a>
         </div>

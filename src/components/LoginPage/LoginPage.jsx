@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { userActions } from "../../actions";
+import styles from "./LoginPage.module.css";
 
 function LoginPage() {
   const [inputs, setInputs] = useState({
@@ -35,49 +36,60 @@ function LoginPage() {
   }
 
   return (
-    <div className="">
-      <h2>Login</h2>
-      <form name="form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Username</label>
-          <input
-            type="text"
-            name="username"
-            value={username}
-            onChange={handleChange}
-            className={
-              "form-control" + (submitted && !username ? " is-invalid" : "")
-            }
-          />
-          {submitted && !username && (
-            <div className="invalid-feedback">Username is required</div>
-          )}
+    <div className={styles.content}>
+      <div className={styles.container}>
+        <div className={styles.formContainer}>
+          <form className={styles.form} name="form" onSubmit={handleSubmit}>
+            <h1 className={styles.title}>Login</h1>
+            <input
+              type="text"
+              name="username"
+              value={username}
+              onChange={handleChange}
+              placeholder="Username"
+              className={
+                "form-control" + (submitted && !username ? " is-invalid" : "")
+              }
+            />
+            {submitted && !username && (
+              <div className="invalid-feedback">Username is required</div>
+            )}
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={handleChange}
+              placeholder="Password"
+              className={
+                "form-control" + (submitted && !password ? " is-invalid" : "")
+              }
+            />
+            {submitted && !password && (
+              <div className="invalid-feedback">Password is required</div>
+            )}
+            <button className={styles.button}>
+              {loggingIn && <span className=""></span>}
+              Sign In
+            </button>
+          </form>
         </div>
-        <div className="form-group">
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-            className={
-              "form-control" + (submitted && !password ? " is-invalid" : "")
-            }
-          />
-          {submitted && !password && (
-            <div className="invalid-feedback">Password is required</div>
-          )}
+        <div className={styles.overlayContainer}>
+          <div className={styles.overlay}>
+            <div className={styles.overlayPanel}>
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <Link to="/register" className="">
+                <button
+                  className={styles.button + " " + styles.ghost}
+                  id="signUp"
+                >
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="form-group">
-          <button className="">
-            {loggingIn && <span className=""></span>}
-            Login
-          </button>
-          <Link to="/register" className="">
-            Register
-          </Link>
-        </div>
-      </form>
+      </div>
     </div>
   );
 }
