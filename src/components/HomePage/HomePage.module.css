@@ -84,6 +84,13 @@
   justify-content: center;
 }
 
+.logout {
+  flex: 1 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .avatarImage {
   border-radius: 50%;
   height: 38px;
