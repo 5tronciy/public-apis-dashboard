@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/public-apis-dashboard/static/css/main.b1ca4ed7.chunk.css",
+    "main.js": "/public-apis-dashboard/static/js/main.32bb7e18.chunk.js",
+    "main.js.map": "/public-apis-dashboard/static/js/main.32bb7e18.chunk.js.map",
+    "runtime-main.js": "/public-apis-dashboard/static/js/runtime-main.77d8bf64.js",
+    "runtime-main.js.map": "/public-apis-dashboard/static/js/runtime-main.77d8bf64.js.map",
+    "static/js/2.8b549144.chunk.js": "/public-apis-dashboard/static/js/2.8b549144.chunk.js",
+    "static/js/2.8b549144.chunk.js.map": "/public-apis-dashboard/static/js/2.8b549144.chunk.js.map",
+    "static/js/3.32d00a11.chunk.js": "/public-apis-dashboard/static/js/3.32d00a11.chunk.js",
+    "static/js/3.32d00a11.chunk.js.map": "/public-apis-dashboard/static/js/3.32d00a11.chunk.js.map",
+    "index.html": "/public-apis-dashboard/index.html",
+    "static/css/main.b1ca4ed7.chunk.css.map": "/public-apis-dashboard/static/css/main.b1ca4ed7.chunk.css.map",
+    "static/js/2.8b549144.chunk.js.LICENSE.txt": "/public-apis-dashboard/static/js/2.8b549144.chunk.js.LICENSE.txt",
+    "static/media/HomePage.module.css": "/public-apis-dashboard/static/media/BG_Circles.ad6dddaf.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.77d8bf64.js",
+    "static/js/2.8b549144.chunk.js",
+    "static/css/main.b1ca4ed7.chunk.css",
+    "static/js/main.32bb7e18.chunk.js"
+  ]
+}
