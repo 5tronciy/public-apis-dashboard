@@ -69,7 +69,7 @@ function LoginPage() {
               <div className="invalid-feedback">Password is required</div>
             )}
             <button className={styles.button}>
-              {loggingIn && <span className=""></span>}
+              {loggingIn && <span className="">Logging in...</span>}
               Sign In
             </button>
           </form>
