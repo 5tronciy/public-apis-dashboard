@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { userActions } from "../../actions";
 import styles from "./LoginPage.module.css";
-import { getLoggingIn } from "../../selectors/selectors";
 
 function LoginPage() {
   const [inputs, setInputs] = useState({
@@ -13,7 +12,6 @@ function LoginPage() {
   });
   const [submitted, setSubmitted] = useState(false);
   const { username, password } = inputs;
-  const loggingIn = useSelector(getLoggingIn);
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -68,10 +66,7 @@ function LoginPage() {
             {submitted && !password && (
               <div className="invalid-feedback">Password is required</div>
             )}
-            <button className={styles.button}>
-              {loggingIn && <span className="">Logging in...</span>}
-              Sign In
-            </button>
+            <button className={styles.button}>Sign In</button>
           </form>
         </div>
         <div className={styles.overlayContainer}>
