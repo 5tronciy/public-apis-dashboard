@@ -5,13 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { history } from "../../helpers";
 import { alertActions } from "../../actions";
-import { PrivateRoute } from "../../components";
+import { PrivateRoute } from "..";
 import { HomePage } from "../HomePage/HomePage";
 import { LoginPage } from "../LoginPage/LoginPage";
 import { RegisterPage } from "../RegisterPage/RegisterPage";
+import { getAlert } from "../../selectors/selectors";
 
 function App() {
-  const alert = useSelector((state) => state.alert);
+  const alert = useSelector(getAlert);
   const dispatch = useDispatch();
 
   useEffect(() => {
