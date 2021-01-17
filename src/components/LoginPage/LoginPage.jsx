@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { userActions } from "../../actions";
 import styles from "./LoginPage.module.css";
+import { getLoggingIn } from "../../selectors/selectors";
 
 function LoginPage() {
   const [inputs, setInputs] = useState({
@@ -12,7 +13,7 @@ function LoginPage() {
   });
   const [submitted, setSubmitted] = useState(false);
   const { username, password } = inputs;
-  const loggingIn = useSelector((state) => state.authentication.loggingIn);
+  const loggingIn = useSelector(getLoggingIn);
   const dispatch = useDispatch();
   const location = useLocation();
 

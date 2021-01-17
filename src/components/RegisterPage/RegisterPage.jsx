@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { userActions } from "../../actions";
 import styles from "./RegisterPage.module.css";
+import { getRegistring } from "../../selectors/selectors";
 
 function RegisterPage() {
   const [user, setUser] = useState({
@@ -13,7 +14,7 @@ function RegisterPage() {
     password: "",
   });
   const [submitted, setSubmitted] = useState(false);
-  const registering = useSelector((state) => state.registration.registering);
+  const registering = useSelector(getRegistring);
   const dispatch = useDispatch();
 
   useEffect(() => {
