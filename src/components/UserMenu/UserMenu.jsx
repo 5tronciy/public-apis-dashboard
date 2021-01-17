@@ -5,17 +5,25 @@ import { useSelector } from "react-redux";
 
 import UserInList from "./UserInList/UserInList";
 
-import { getUsers, getUser } from "../../selectors/selectors";
+import { getUsers, getUser, getLoggingIn } from "../../selectors/selectors";
 function UserMenu() {
   const users = useSelector(getUsers);
   const user = useSelector(getUser);
+  const loggingIn = useSelector(getLoggingIn);
+
+  console.log(user, users, users.items.id);
 
   return (
     <div className={styles.userMenu}>
       <div className={styles.currentUserContainer}>
-        <div className={styles.currentUserInfo}>
-          {user.firstName + " " + user.lastName}
-        </div>
+        {loggingIn && (
+          <div className={styles.currentUserInfo}>Logging in...</div>
+        )}
+        {user.id && (
+          <div className={styles.currentUserInfo}>
+            {user.firstName + " " + user.lastName}
+          </div>
+        )}
       </div>
 
       <div className={styles.usersContainer}>
@@ -25,9 +33,14 @@ function UserMenu() {
         )}
         {users.items && (
           <div>
-            {users.items.map((user) => (
-              <UserInList user={user} key={user.id} />
-            ))}
+            {users.items
+              .filter((users) => {
+                console.log(users);
+                return users.id !== user.id;
+              })
+              .map((user) => (
+                <UserInList user={user} key={user.id} />
+              ))}
           </div>
         )}
       </div>
