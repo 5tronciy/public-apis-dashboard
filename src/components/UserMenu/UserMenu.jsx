@@ -34,10 +34,7 @@ function UserMenu() {
         {users.items && (
           <div>
             {users.items
-              .filter((users) => {
-                console.log(users);
-                return users.id !== user.id;
-              })
+              .filter((users) => users.id !== user.id)
               .map((user) => (
                 <UserInList user={user} key={user.id} />
               ))}
