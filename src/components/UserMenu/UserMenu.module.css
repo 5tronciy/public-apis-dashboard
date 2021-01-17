@@ -1,0 +1,79 @@
+.userMenu {
+  font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 11%;
+  top: 110px;
+  border-radius: 8px;
+  width: 28%;
+  min-width: 200px;
+  max-width: 250px;
+  max-height: calc(100vh - 62px - 100px);
+}
+
+.currentUserContainer {
+  margin: 20px 33px;
+}
+
+.currentUserInfo {
+  line-height: normal;
+  text-align: center;
+}
+
+.usersContainer {
+  font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
+  color: #000;
+  line-height: normal;
+  border-top: 1px solid #e8eaed;
+}
+
+.addUserContainer {
+  line-height: normal;
+}
+
+.addUserLink {
+  display: table;
+  padding: 14px 41px;
+  text-decoration: none;
+}
+
+.addUser {
+  color: #3c4043;
+  font: 500 14px/16px Google Sans, Roboto, RobotoDraft, Helvetica, Arial,
+    sans-serif;
+  letter-spacing: 0.25px;
+  display: table-cell;
+  padding: 0 16px;
+  vertical-align: middle;
+}
+
+.logoutContainer {
+  border-top: 1px solid #e8eaed;
+  text-align: center;
+}
+
+.logout {
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  display: inline-block;
+  font: 500 14px/16px Google Sans, Roboto, RobotoDraft, Helvetica, Arial,
+    sans-serif;
+  letter-spacing: 0.15px;
+  margin: 16px;
+  padding: 10px 24px;
+  text-decoration: none;
+  color: #3c4043;
+}
+
+.addUserLink:hover,
+.logout:hover {
+  background-color: #f7f8f8;
+}
+
+.addUserLink:active,
+.logout:active {
+  background-color: #e8e8e9;
+}
