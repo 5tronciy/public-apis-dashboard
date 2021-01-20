@@ -21,7 +21,10 @@ function UserMenu() {
         )}
         {user.id && (
           <div className={styles.currentUserInfo}>
-            {user.firstName + " " + user.lastName}
+            <div>{user.firstName + " " + user.lastName}</div>
+            <Link to="/profile" className={styles.profile}>
+              Profile
+            </Link>
           </div>
         )}
       </div>

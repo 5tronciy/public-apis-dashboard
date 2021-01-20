@@ -23,6 +23,19 @@
   text-align: center;
 }
 
+.profile {
+  border: 1px solid #dadce0;
+  border-radius: 100px;
+  color: #3c4043;
+  display: inline-block;
+  font: 500 14px/16px Google Sans, Roboto, RobotoDraft, Helvetica, Arial,
+    sans-serif;
+  letter-spacing: 0.25px;
+  margin: 16px 0 0;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
 .usersContainer {
   font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
   color: #000;
@@ -68,12 +81,17 @@
   color: #3c4043;
 }
 
+.profile:hover,
 .addUserLink:hover,
 .logout:hover {
   background-color: #f7f8f8;
 }
 
+.profile:active,
 .addUserLink:active,
 .logout:active {
   background-color: #e8e8e9;
+  border-color: transparent;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
 }

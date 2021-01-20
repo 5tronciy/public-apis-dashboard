@@ -1,0 +1,22 @@
+.container {
+  margin: 0 2rem;
+}
+
+.main {
+  background: url(BG_Circles.jpg) repeat-y;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.content {
+  min-width: 300px;
+  width: 89%;
+  margin-bottom: 80px;
+  margin-top: 39px;
+  display: flex;
+  flex-direction: column;
+  background: #ecf1f5;
+  box-shadow: 0px 17px 38px 3px rgba(110, 22, 10, 0.2);
+}
